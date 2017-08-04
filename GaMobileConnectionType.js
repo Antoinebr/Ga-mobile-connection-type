@@ -38,11 +38,7 @@ gaMobileConnectivity = function(){
 
   this.getLoadTime = function() {
 
-        if(!window.performance){
-            
-            return performance.timing.loadEventStart - performance.timing.navigationStart;
-
-        }
+        if(window.performance) return performance.timing.loadEventStart - performance.timing.navigationStart;
 
   }
 
