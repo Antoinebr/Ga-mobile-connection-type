@@ -17,7 +17,7 @@ For debugging purposes please use the remote USB debugger.
 * We save the loading Time to first byte / Time to fist paint / Loadtime  by sending it to GA via the User timing API 
 * We put a cookie to the user to don't send the loading time on the following pages ( with browser caching )
 
-### What's 3G / 4G ... 
+### What's 3G / 4G ...  ? 
 
 I grouped the "similar connection' as follow : 
 
@@ -81,9 +81,27 @@ Here I can see the split of my users based on the location and connectivity
 
 
 
+## FAQ 
+
+### Can I use this with Google Tag manager ?
+
+Yes ! Just copy paste the content of the ```build/GaMobileConnectionType.min.js``` inside a custom HTML. **NB don't forget to put the code between <script> // code here </script>** 
+
+
+### As you fire an custom event, is this will impact my bounce rate ? 
+
+No ! Because we fire a 'non-interaction event' [more info here](https://support.google.com/analytics/answer/1033068#NonInteractionEvents)
+
+
+### Can I load the script in Async ?
+
+Yes !
+
+
+
 ## Dev 
 
-If you are a simple user you can't stop reading that. 
+If you are a simple user you can't stop reading here. 
 
 ### To setup a dev environement 
 
