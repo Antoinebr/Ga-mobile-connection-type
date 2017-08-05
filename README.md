@@ -59,15 +59,15 @@ Copy paste the content of the ```GaMobileConnectionType.min.js``` just after the
  
   ### 4G
  
- ![4G segment](https://pasteboard.co/GEe2hHP.png)
+ ![4G segment](https://img4.hostingpics.net/pics/954931GEe2hHP.png)
  
   ### 3G Fast
  
- ![3G Fast](https://pasteboard.co/GEe2JSU.png)
+ ![3G Fast](https://img4.hostingpics.net/pics/604312GEe2JSU.png)
  
  ### 3G Slow 
  
- ![3G Slow](https://pasteboard.co/GEe3gO0.png)
+ ![3G Slow](https://img4.hostingpics.net/pics/633207GEe3gO0.png)
  
  
 ## Analyze your datas 
@@ -76,7 +76,7 @@ Use the custom segement to filter your datas.
 
 Here I can see the split of my users base on the location and connectivity 
 
-![split](https://pasteboard.co/GEe5dZ2.png)
+![split](https://img4.hostingpics.net/pics/475243GEe5dZ2.png)
 
 
 
