@@ -3,6 +3,7 @@ gaMobileConnectivity = function(){
 
   this.getConnectionName = function(type, downlinkMax){
 
+
     if( type === 'cellular') {
     
       if(downlinkMax > 42)  return '4G';
@@ -38,13 +39,36 @@ gaMobileConnectivity = function(){
 
   this.getLoadTime = function() {
 
-        if(window.performance) return performance.timing.loadEventStart - performance.timing.navigationStart;
+
+    return performance.timing.loadEventStart - performance.timing.navigationStart;
 
   }
 
 
+  this.getTimeToFirstByte = function() {
+
+    var timing = window.performance.timing;
+
+    return timing.responseStart - timing.navigationStart;
+
+  }
+
+
+  this.getFirstPaintTime = function() {
+
+
+    var load = window.chrome.loadTimes();
+
+    var firstPaintTime = (load.firstPaintTime - load.startLoadTime) * 1000;
+
+    return Math.round(firstPaintTime);
+
+  } 
+
+
 
   this.getConnectionType = function() {
+
 
     if ('connection' in navigator && 'downlinkMax' in navigator.connection ){
         
@@ -64,19 +88,30 @@ gaMobileConnectivity = function(){
 
   this.sendToGA = function(connection) {
 
-    ga('send', 'event', 'connectivity', connection.type, connection.name, {nonInteraction: true});
 
-    ga('send', 'timing', 'FirstView', 'loadTime', this.getLoadTime());
+    ga( 'send', 'event', 'connectivity', connection.type, connection.name, {nonInteraction: true} );
+
+    ga( 'send', 'timing', 'FirstView', 'loadTime', this.getLoadTime() );
+
+    ga( 'send', 'timing', 'FirstView', 'firstPaintTime', this.getFirstPaintTime() );
+
+    ga( 'send', 'timing', 'FirstView', 'timeToFirstByte', this.getTimeToFirstByte() );
+
 
     this.createCookie('gaConnectivitySent', true,10);
 
     console.log('[GaConnect] ',connection.type, connection.name,' sent !');
 
-    console.log('[GaConnect] load time sent : ', this.getLoadTime() );
+    console.log('[GaConnect] load time : ', this.getLoadTime() );
+
+    console.log('[GaConnect] firstPaintTime : ', this.getFirstPaintTime() );
+
+    console.log('[GaConnect] timeToFirstByte : ', this.getTimeToFirstByte() );
 
     return true; 
     
   }
+
 
 
   this.track = function() {
