@@ -74,7 +74,7 @@ Copy paste the content of the ```GaMobileConnectionType.min.js``` just after the
 
 Use the custom segement to filter your datas. 
 
-Here I can see the split of my users base on the location and connectivity 
+Here I can see the split of my users based on the location and connectivity 
 
 ![split](https://img4.hostingpics.net/pics/475243GEe5dZ2.png)
 
