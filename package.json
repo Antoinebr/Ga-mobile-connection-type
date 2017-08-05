@@ -1,0 +1,30 @@
+{
+  "name": "ga-mobile-connection-type",
+  "version": "1.0.0",
+  "description": "Send to Google Analytics how many Andoid Chrome mobile users uses your website in WIFI / 4G / 3G Fast / 3G SLOW / 2G.",
+  "main": "GaMobileConnectionType.js",
+  "scripts": {
+    "test": "mocha test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Antoinebr/Ga-mobile-connection-type.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Antoinebr/Ga-mobile-connection-type/issues"
+  },
+  "homepage": "https://github.com/Antoinebr/Ga-mobile-connection-type#readme",
+  "dependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-uglify": "^3.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "mocha": "^3.5.0",
+    "rewire": "^2.5.2"
+  },
+  "devDependencies": {
+    "load-grunt-tasks": "^3.5.2"
+  }
+}

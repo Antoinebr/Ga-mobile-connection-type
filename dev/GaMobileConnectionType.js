@@ -8,11 +8,13 @@ gaMobileConnectivity = function(){
     
       if(downlinkMax > 42)  return '4G';
 
-      if (downlinkMax <= 42 && downlinkMax > 14.7) return '3GFAST';
+      if (downlinkMax <= 42 && downlinkMax > 21) return 'H+';
 
-      if (downlinkMax >= 2 && downlinkMax < 14.7) return '3GSLOW';
+      if (downlinkMax <= 21 && downlinkMax >= 14.3) return '3G';
 
-      if (downlinkMax < 2) return '2G';
+      if (downlinkMax <= 3.6 && downlinkMax >= 2.46 ) return '2G';
+
+      if (downlinkMax < 2.46 ) return 'E';
 
     }
     
@@ -21,7 +23,9 @@ gaMobileConnectivity = function(){
     
       if(downlinkMax <= 11)  return 'SLOW';
       
-      if(downlinkMax >= 54 && downlinkMax < 6933)  return 'G';
+      if(downlinkMax >= 54 && downlinkMax < 600)  return 'G';
+
+      if(downlinkMax >= 600 && downlinkMax < 6933 )  return 'N';
       
       if(downlinkMax >= 6933 && downlinkMax < 7000 )  return 'AC';
       
@@ -156,22 +160,5 @@ gaMobileConnectivity = function(){
 
 
 }
-
-
-
-window.addEventListener("load", function(event) {
-
-
-  try {
-  
-    (new gaMobileConnectivity()).init();
-
-  } catch (error) {
-
-    console.log('[GaConnect] ', 'Error :( ', error);
-
-  }
-
-});
 
 
