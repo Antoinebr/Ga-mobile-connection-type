@@ -10,6 +10,8 @@ This code uses the netinfo API ( [only available in Andoid + Chrome >= 59](https
 For debugging purposes please use the remote USB debugger.
 
 
+
+
 ## How this works ? 
 
 * When the mobile user loads the landing page we check if we can detect his connection type.
@@ -17,11 +19,15 @@ For debugging purposes please use the remote USB debugger.
 * We save the loading Time to first byte / Time to fist paint / Loadtime  by sending it to GA via the User timing API 
 * We put a cookie to the user to don't send the loading time on the following pages ( with browser caching )
 
+
+
+
 ### What's 3G / 4G ...  ? 
 
 I grouped the "similar connection' as follow : 
 
 ![3G Slow](https://img4.hostingpics.net/pics/852978ScreenShot20170805at24519PM.png)
+
 
 
 
@@ -43,7 +49,12 @@ Copy paste the content of the ```build/GaMobileConnectionType.min.js``` just aft
 </script>
 ```
  
+ 
+ 
  ## Google Analytics Setup 
+ 
+ 
+ 
  
  ### Add a new Goal ( event tracking ) 
  
@@ -57,18 +68,23 @@ Copy paste the content of the ```build/GaMobileConnectionType.min.js``` just aft
  ![add goal demo](http://g.recordit.co/EeHRyN5gQh.gif "add goal demo")
  
  
+ 
+ 
  ### Create custom segments 
+ 
  
  ### Wifi 
  
  ![wifi segment](https://img4.hostingpics.net/pics/721278ScreenShot20170805at102905AM.png)
  
+ 
   ### 4G
  
  ![4G segment](https://img4.hostingpics.net/pics/954931GEe2hHP.png)
  
- 
  Do the same with other connection type ( 2G / 3G / H + ) ( check the table for all the labels name)
+ 
+ 
  
  
 ## Analyze your datas 
@@ -81,7 +97,9 @@ Here I can see the split of my users based on the location and connectivity
 
 
 
+
 ## FAQ 
+
 
 ### Can I use this with Google Tag manager ?
 
@@ -101,15 +119,19 @@ Yes !
 
 ## Dev 
 
+
 If you are a simple user you can't stop reading here. 
+
 
 ### To setup a dev environement 
 
 ```npm install``` 
 
+
 ### To build
 
 ```grunt watch``` 
+
 
 ### To run the tests
 
