@@ -1,12 +1,12 @@
 # Ga-mobile-connection-type
 
-Send to Google Analytics how many Andoid Chrome mobile users use your website in WIFI / 4G / 3G Fast / 3G SLOW / 2G. 
+Send to Google Analytics how many Android Chrome mobile users use your website in WIFI / 4G / 3G Fast / 3G SLOW / 2G. 
 
 Send to GA the Time to first byte / Time to fist paint / Loadtime of the **first landing** other page views (with cache) will be ignored. 
 
-This code uses the netinfo API ( [only available in Andoid + Chrome >= 59](https://caniuse.com/#search=netinfo) ), **so this will not track all your mobile sessions** but you can extrapolate those numbers to have a good idea of the connectivity used across your website. 
+This code uses the netinfo API ( [only available in Android + Chrome >= 59](https://caniuse.com/#search=netinfo) ), **so this will not track all your mobile sessions** but you can extrapolate those numbers to have a good idea of the connectivity used across your website. 
 
-**Mobile emulation with chrome dev tool will not fire the code [only available in Andoid + Chrome >= 59](https://caniuse.com/#search=netinfo)** 
+**Mobile emulation with chrome dev tool will not fire the code [only available in Android + Chrome >= 59](https://caniuse.com/#search=netinfo)** 
 For debugging purposes please use the remote USB debugger.
 
 
