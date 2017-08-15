@@ -103,7 +103,25 @@ Here I can see the split of my users based on the location and connectivity
 
 ### Can I use this with Google Tag manager ?
 
-Yes ! Just copy paste the content of the ```build/GaMobileConnectionType.min.js``` inside a custom HTML. **NB don't forget to put the code between <script> // code here </script>** 
+**Documentation for GTM : Work In progress**
+
+Yes ! Just copy paste the content of the ```build/GaMobileConnectionType.gtm.min.js``` inside a custom HTML. **NB don't forget to put the code between <script> // code here </script>**
+
+Setup GTM to collect these DataLayer variable 
+
+```js
+ dataLayer.push({
+       'event' : 'connectivityDetected',
+       'eventCategory': 'connectivity',
+       'eventAction': connection.type,
+       'eventLabel': connection.name
+    });
+ ```
+ 
+ You must have somethig like that 
+![gtmconfig](https://img4.hostingpics.net/pics/212853ScreenShot20170815at102622AM.png)
+
+
 
 
 ### As you fire an custom event, will this impact my bounce rate ? 
