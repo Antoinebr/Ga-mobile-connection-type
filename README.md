@@ -112,9 +112,9 @@ Setup GTM to collect these DataLayer variable
 ```js
  dataLayer.push({
        'event' : 'connectivityDetected',
-       'eventCategory': 'connectivity',
-       'eventAction': connection.type,
-       'eventLabel': connection.name
+       'gacEventCategory': 'connectivity',
+       'gacEventAction': connection.type,
+       'gacEventLabel': connection.name
     });
  ```
  
