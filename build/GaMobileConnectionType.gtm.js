@@ -96,9 +96,9 @@
 
      dataLayer.push({
        'event' : 'connectivityDetected',
-       'eventCategory': 'connectivity',
-       'eventAction': connection.type,
-       'eventLabel': connection.name
+       'gacEventCategory': 'connectivity',
+       'gacEventAction': connection.type,
+       'gacEventLabel': connection.name
     });
 
     ga( 'send', 'timing', 'FirstView', 'loadTime', this.getLoadTime() );
