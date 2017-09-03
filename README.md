@@ -1,5 +1,7 @@
 # Ga-mobile-connection-type
 
+Instead of reading this documentation have a look at the video : https://www.youtube.com/watch?v=IoNX4Wu0PPc
+
 Send to Google Analytics how many Android Chrome mobile users use your website in WIFI / 4G / 3G Fast / 3G SLOW / 2G. 
 
 Send to GA the Time to first byte / Time to fist paint / Loadtime of the **first landing** other page views (with cache) will be ignored. 
@@ -103,23 +105,41 @@ Here I can see the split of my users based on the location and connectivity
 
 ### Can I use this with Google Tag manager ?
 
-**Documentation for GTM : Work In progress**
+Take a look a this video and how to setup the tag with GTM  : https://youtu.be/IoNX4Wu0PPc?t=2m34s
 
-Yes ! Just copy paste the content of the ```build/GaMobileConnectionType.gtm.min.js``` inside a custom HTML. **NB don't forget to put the code between <script> // code here </script>**
+Setup in GTM these DataLayer variables : 
 
-Setup GTM to collect these DataLayer variable 
+```gacEventCategory```
 
-```js
- dataLayer.push({
-       'event' : 'connectivityDetected',
-       'gacEventCategory': 'connectivity',
-       'gacEventAction': connection.type,
-       'gacEventLabel': connection.name
-    });
- ```
- 
- You must have somethig like that 
-![gtmconfig](https://img4.hostingpics.net/pics/212853ScreenShot20170815at102622AM.png)
+```gacEventAction```
+
+```gacEventLabel```
+
+
+Add a trigger : 
+
+With a trigger type of customEvent set the eventName as ```connectivityDetected``` 
+
+
+Add two tags :
+
+
+New tag -> tag configuration -> universal analytics 
+
+Set track type as event and put as category the variables previously created in the data layer :
+
+![gtm](https://img11.hostingpics.net/pics/119111ScreenShot20170903at90625PM.png)
+
+**NB: Put non-interaction event as true**
+
+As a trigger select the trigger ```connectivityDetected```  that we created. 
+
+
+Add a second tag 
+
+Add a custom HTML tag  and copy / paste the content of this file : https://github.com/Antoinebr/Ga-mobile-connection-type/blob/master/build/GaMobileConnectionType.gtm.min.js
+
+Put all pages as a trigger. 
 
 
 
